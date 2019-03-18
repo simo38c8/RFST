@@ -1,0 +1,176 @@
+/*font-family: 'Abel', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #373D46;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+nav {
+    background-color: #28292B;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search {
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Abel', sans-serif;
+    padding: 1rem;
+    font-size: 2.5rem;
+}
+
+h1::selection {
+    background: #33FC02;
+}
+
+h2::selection {
+    background: #33FC02;
+}
+
+h3::selection {
+    background: #33FC02;
+}
+
+h4::selection {
+    background: #33FC02;
+}
+
+p {
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+p::selection {
+    background: #33FC02;
+}
+
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    /*
+    box-shadow: 2.5px 5px #000000;
+    margin-top: 1rem;
+*/
+
+}
+
+section:nth-child(odd) {
+    background-color: #EAEAEA;
+}
+
+section:nth-child(even) {
+    background-color: white;
+}
+
+/*VIDEO*/
+
+#video .sectionwrapper {
+    flex-basis: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tekst_video {
+    flex-direction: column;
+    flex-basis: 400px;
+    flex-grow: 1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.video {
+    text-align: center;
+    flex-direction: column;
+    flex-basis: 400px;
+    flex-grow: 1;
+}
+
+
+
+video {
+    padding: 1rem;
+}
+
+/*CYKELHJELM*/
+
+#cykelhjelm {
+    background-color: #373D46;
+    box-shadow: 0px 0px;
+    color: white;
+    font-family: 'Abel', sans-serif;
+    font-size: 2.5rem;
+    text-align: center
+}
+
+/*SPLASH*/
+
+#splash {
+    max-width: 1500px;
+    margin: 0 auto;
+    box-shadow: 0px 0px;
+    margin-top: 0rem;
+}
+
+
+/*MEDIA*/
+
+@media only screen and (min-width: 300px) {
+    nav img {
+        width: 50%;
+        padding: 0.5rem;
+    }
+
+    .search {
+        text-align: center;
+        width: 33%;
+        margin-top: 0.65rem;
+
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    nav img {
+        width: 40%;
+        padding: 1rem;
+    }
+
+    .search {
+        text-align: center;
+        width: 15%;
+        margin-top: 0.4rem;
+
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    nav img {
+        width: 60%;
+        padding: 1rem;
+    }
+
+    .search {
+        text-align: center;
+        margin-top: 1.2rem;
+        width: 8%;
+    }
+}
