@@ -111,6 +111,74 @@ video {
     padding: 1rem;
 }
 
+
+
+
+
+/******** quiz style *********/
+
+#quiz .sectionwrapper {
+    flex-basis: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tekst_quiz {
+    flex-direction: column;
+    flex-basis: 400px;
+    flex-grow: 1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.quizzen {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+    background-color: #28292B;
+    margin: 2rem;
+}
+
+
+#quiz {
+    background-color: #373D46;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.question {
+    font-weight: 600;
+    color: #fff;
+}
+
+.answers {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.answers label {
+    display: block;
+}
+
+#submit {
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#submit:hover {
+    background-color: #38a;
+}
+
+
+
+
 /*CYKELHJELM*/
 
 #cykelhjelm {
