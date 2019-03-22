@@ -3,6 +3,7 @@ console.log("siden vises");
 
 
 function sidenVises() {
+
 }
 
 (function () {
@@ -119,7 +120,6 @@ function sidenVises() {
     // on submit, show results
     submitButton.addEventListener("click", showResults);
 })();
-<<<<<<< HEAD
 
 
 
@@ -155,3 +155,5 @@ function sidenVises() {
             console.log(valgt);
                 }
         });
+
+
