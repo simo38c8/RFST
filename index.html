@@ -13,21 +13,23 @@
 
 <body>
 
-  <header>
-      <nav>
-          <div>
-              <img src="billeder/logo.png" alt="Logo">
-             </div>
-              <div class="search">
-              <img src="billeder/search.png" alt="søgeknap">
+    <header>
+        <nav>
+            <div>
+                <img src="billeder/logo.png" alt="Logo">
+            </div>
+            <div class="search">
+                <img src="billeder/search.png" alt="søgeknap">
 
 
-          </div>
-      </nav>
-  </header>
-   <div id="splash">
-       <img src="billeder/splash.jpg" alt="splash billede">
-   </div>
+            </div>
+        </nav>
+    </header>
+    <div id="splash">
+        <img src="billeder/splash.jpg" alt="splash billede">
+    </div>
+
+   <audio src="cykelklokke.mp3" id="ring"></audio>
 
     <section id="video">
         <div class="sectionwrapper">
@@ -44,14 +46,31 @@
         </div>
     </section>
 
-    <section id="profil">
+    <section id="quiz">
         <div class="sectionwrapper">
-            <div class="profil">
-               <h2></h2>
-               <p></p>
+            <div class="tekst_quiz">
+                <h2>Quiz om cykel og hjelm</h2>
+                <p>Ved du egentlig hvor meget det betyder for miljøet at vælge cyklen til arbejde i stedet for bilen? <br>
+
+                    Har du nogensinde tænkt over, hvorfor vi er så optaget af at børn skal have cykelhjelm på, men når det gælder voksne, er det mindre vigtigt? <br>
+
+                    Ved du egentlig hvor meget cykelhjelmen virker, hvis uheldet er ude? <br> <br>
+
+                    Hvis du har lyst til at teste din viden, er du velkommen til at tage vores quiz til højre.</p> <br> <br>
 
             </div>
-            <div class="profil_billede"></div>
+
+            <div id="samlet_quiz">
+
+                <div id="quizzen">
+                </div>
+
+                <button id="submit">Tjek svar
+                </button>
+
+                <div id="results">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -60,6 +79,52 @@
         <p>Cykelhjelmen reducerer risikoen for alvorlige hovedskader med ca. 70 %</p>
     </section>
 
+
+<section id="datavisualisering">
+    <div class="sectionwrapper">
+                
+    <div id="svgcontainer">
+      
+        <svg class="piechart" viewbox="0 0 200 200">
+         
+         <g id="cirkle">
+         <circle r="100" cx="100" cy="100" class="pie1" />
+         <circle r="100" cx="100" cy="100" class="pie2" />
+         <circle r="100" cx="100" cy="100" class="pie3" />
+         </g>
+        
+         <g id="tekst">
+
+           <text id="90" x="120" y="-70" class="graf-text st2" fill="white">69.6%</text>
+           <text x="18" y="-113" class="graf-text st2" fill="white">21.7%</text>
+           <text x="65" y="-160" class="graf-text st2" fill="white">8,7%</text>
+           </g>
+     </svg>
+     
+     
+     
+
+     <g id="chart_tekst"> 
+     <p><span class="cirkel3"></span>Jeg bruger allerede cykelhjelm</p>
+    
+    <p><span class="cirkel1"></span>Ja, hvis mit barnebarn beder mig om det</p>
+    <p><span class="cirkel2"></span>Ja, hvis mit barn beder mig om det</p>
+    </g>
+    
+
+    </div>
+            
+               
+               <div class="datavisualisering_tekst">
+                <h2>Pie chart</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi libero aspernatur corrupti modi quam voluptates deserunt perspiciatis excepturi sit soluta magni molestiae est quaerat eligendi, voluptas iure iste officiis delectus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia saepe rem, tempora, unde fuga quod sapiente, dolorem, molestias quisquam ad sit minus doloribus fugit deleniti dolore nam recusandae laudantium ea.</p>
+            </div>
+
+
+            
+        </div>
+</section>
 
 
     <script src="main.js"></script>
