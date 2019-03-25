@@ -235,6 +235,16 @@ video {
 }
 
 
+#splash .explainer {
+    background-color: hsla(216, 12%, 25%, 0.76);
+    color: white;
+    width: 40vw;
+/*
+    position: absolute;
+    bottom: 0;
+*/
+}
+
 
 /*Piechart*/
 
