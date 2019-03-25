@@ -58,6 +58,7 @@ h4::selection {
 p {
     padding: 1rem;
     line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
 }
 
 p::selection {
@@ -118,7 +119,6 @@ video {
 /******** quiz style *********/
 
 #quiz .sectionwrapper {
-    /*    flex-basis: 1200px;*/
     display: flex;
     flex-wrap: wrap;
 
@@ -129,6 +129,15 @@ video {
     flex-basis: 400px;
     flex-grow: 1;
     font-family: 'Open Sans', sans-serif;
+}
+
+#samlet_quiz{
+    flex-direction: column;
+    flex-basis: 400px;
+    flex-grow: 1;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 1rem;
+    padding-top: 1rem;
 }
 
 #quizzen {
