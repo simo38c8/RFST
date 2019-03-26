@@ -298,6 +298,7 @@ video {
 /*SPLASH*/
 
 #splash {
+    max-width: 2000px;
     position: relative;
     margin: 0 auto;
     box-shadow: 0px 0px;
@@ -399,7 +400,7 @@ video {
 
 .pie1 {
     fill: none;
-    stroke: #33FC02;
+    stroke: #9a9a9a;
     stroke-width: 200;
     stroke-dasharray: 10 632;
     transition: all 1s ease;
@@ -407,7 +408,7 @@ video {
 
 .pie2 {
     fill: none;
-    stroke: #3d60f0;
+    stroke: #33FC02;
     stroke-width: 200;
     stroke-dasharray: 10 632;
     stroke-dashoffset: -10;
@@ -417,7 +418,7 @@ video {
 
 .pie3 {
     fill: none;
-    stroke: #f52b2b;
+    stroke: #149b02;
     stroke-width: 200;
     stroke-dasharray: 10 632;
     stroke-dashoffset: -20;
@@ -454,38 +455,6 @@ video {
 }
 
 
-.cirkel1 {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: #3d60f0;
-    display: inline-block;
-    margin-right: 8px;
-    margin-left: 8px;
-
-}
-
-.cirkel2 {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: #f52b2b;
-    display: inline-block;
-    margin-right: 8px;
-    margin-left: 8px;
-
-}
-
-.cirkel3 {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: #33FC02;
-    display: inline-block;
-    margin-right: 8px;
-    margin-left: 8px;
-
-}
 
 /*SOME*/
 
@@ -525,7 +494,7 @@ video {
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    background-color: #3d60f0;
+    background-color: #33FC02;
     display: inline-block;
     margin-right: 8px;
     margin-left: 8px;
@@ -536,7 +505,7 @@ video {
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    background-color: #f52b2b;
+    background-color: #149b02;
     display: inline-block;
     margin-right: 8px;
     margin-left: 8px;
@@ -547,7 +516,7 @@ video {
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    background-color: #33FC02;
+    background-color: #9a9a9a;
     display: inline-block;
     margin-right: 8px;
     margin-left: 8px;
@@ -625,9 +594,9 @@ video {
         font-size: 2rem;
     }
 
-     #datavisualisering .sectionwrapper {
-justify-content: flex-end;
-}
+    #datavisualisering .sectionwrapper {
+        justify-content: flex-end;
+    }
 
 }
 
@@ -657,8 +626,8 @@ justify-content: flex-end;
     }
 
 
-  #datavisualisering .sectionwrapper {
-justify-content: flex-end;
-}
+    #datavisualisering .sectionwrapper {
+        justify-content: flex-end;
+    }
 
 }
