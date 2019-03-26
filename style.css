@@ -324,6 +324,7 @@ video {
 
 
 #datavisualisering .sectionwrapper {
+
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -625,8 +626,7 @@ video {
     }
 
      #datavisualisering .sectionwrapper {
-justify-content: flex-end
-
+justify-content: flex-end;
 }
 
 }
@@ -658,8 +658,7 @@ justify-content: flex-end
 
 
   #datavisualisering .sectionwrapper {
-justify-content: flex-end
-
+justify-content: flex-end;
 }
 
 }
