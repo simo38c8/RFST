@@ -324,10 +324,17 @@ video {
 
 
 #datavisualisering .sectionwrapper {
+<<<<<<< HEAD
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
 
+=======
+flex-wrap: wrap;
+    display: flex;
+  justify-content: center;
+
+>>>>>>> origin/master
 }
 
 
@@ -432,7 +439,77 @@ video {
 
 .pie2:hover {
     opacity: 0.5;
+<<<<<<< HEAD
+=======
 }
+
+.pie3:hover {
+    opacity: 0.5;
+}
+
+.graf-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+>>>>>>> origin/master
+}
+
+
+
+#tekst text {
+    transform: rotate(90deg);
+}
+
+#chart_tekst p {
+    padding: 0.5rem;
+}
+
+
+.cirkel1 {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #3d60f0;
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 8px;
+
+}
+
+.cirkel2 {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #f52b2b;
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 8px;
+
+}
+
+.cirkel3 {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #33FC02;
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 8px;
+
+}
+
+/*SOME*/
+
+#some {
+    text-align: center;
+}
+
+#some img {
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition-duration: 0.4s;
+}
+
 
 .pie3:hover {
     opacity: 0.5;
@@ -499,6 +576,7 @@ video {
     margin-right: 5px;
     transition-duration: 0.4s;
 }
+
 
 #some img:hover {
     opacity: 0.5;
@@ -585,4 +663,11 @@ video {
     #cykelhjelm {
         font-size: 2.5rem;
     }
+
+
+  #datavisualisering .sectionwrapper {
+justify-content: flex-end
+
+}
+
 }
