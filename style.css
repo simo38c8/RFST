@@ -17,6 +17,17 @@ body {
     overflow: auto;
 }
 
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3d60f0;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #33FC02;
+}
+
 nav {
     background-color: #28292B;
     display: flex;
