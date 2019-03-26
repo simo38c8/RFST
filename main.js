@@ -106,11 +106,11 @@ function sidenVises() {
         {
             question: "Hvor meget reducerer en cykelhjelm risikoen for hovedskader?",
             answers: {
-                b: "35%",
-                c: "40%",
-                d: "50%"
+                a: "35%",
+                b: "40%",
+                c: "50%"
             },
-            correctAnswer: "d"
+            correctAnswer: "c"
                 }
             ];
 
@@ -124,36 +124,36 @@ function sidenVises() {
 
 
 /*Pie Chart*/
- document.addEventListener("DOMContentLoaded", hentJson);
-        let valueArray = [];
-        let offsetArray = [0];
-        let omkreds = 200*Math.PI;
-        //cirklen er 200 x pi så derfor vil 33% være 209.333333333.//
-        let myData;
-        async function hentJson() {
-            const myJson = await fetch("pie.json");
-            myData = await myJson.json();
-            lavArray();
-        }
-        function lavArray() {
-            myData.forEach(data => {
-                offsetArray.push(data.value + offsetArray[offsetArray.length - 1]);
-                valueArray.push(data.value);
-            })
-            animer();
-        }
-        function animer() {
-            document.querySelectorAll(".piechart circle").forEach( (pie,i) =>{
-                pie.style.strokeDasharray = valueArray[i] + " " + omkreds;
-                pie.style.strokeDashoffset = -offsetArray[i];
-                pie.setAttribute("data-value",valueArray[i]);
-            });
-        }
-        document.querySelector(".piechart").addEventListener("mouseover",e =>{
-              let valgt = e.target.getAttribute("data-value");
-            if(valgt){
-            console.log(valgt);
-                }
-        });
+document.addEventListener("DOMContentLoaded", hentJson);
+let valueArray = [];
+let offsetArray = [0];
+let omkreds = 200 * Math.PI;
+//cirklen er 200 x pi så derfor vil 33% være 209.333333333.//
+let myData;
+async function hentJson() {
+    const myJson = await fetch("pie.json");
+    myData = await myJson.json();
+    lavArray();
+}
 
+function lavArray() {
+    myData.forEach(data => {
+        offsetArray.push(data.value + offsetArray[offsetArray.length - 1]);
+        valueArray.push(data.value);
+    })
+    animer();
+}
 
+function animer() {
+    document.querySelectorAll(".piechart circle").forEach((pie, i) => {
+        pie.style.strokeDasharray = valueArray[i] + " " + omkreds;
+        pie.style.strokeDashoffset = -offsetArray[i];
+        pie.setAttribute("data-value", valueArray[i]);
+    });
+}
+document.querySelector(".piechart").addEventListener("mouseover", e => {
+    let valgt = e.target.getAttribute("data-value");
+    if (valgt) {
+        console.log(valgt);
+    }
+});

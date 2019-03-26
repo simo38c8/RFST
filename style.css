@@ -12,10 +12,20 @@ img {
 
 body {
     margin: 0;
-    background-color: #373D46;
     background-size: cover;
     background-attachment: fixed;
     overflow: auto;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3d60f0;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #33FC02;
 }
 
 nav {
@@ -69,6 +79,7 @@ p::selection {
 section {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 40px;
     /*
     box-shadow: 2.5px 5px #000000;
     margin-top: 1rem;
@@ -83,6 +94,28 @@ section:nth-child(odd) {
 section:nth-child(even) {
     background-color: white;
 }
+
+/*standard SECTION*/
+
+#indslag .sectionwrapper {
+    flex-basis: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*KOLONNE*/
+
+.kolonne {
+    flex-direction: column;
+    flex-basis: 400px;
+    flex-grow: 1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.kolonne img {
+    width: 100%;
+}
+
 
 /*VIDEO*/
 
@@ -131,14 +164,67 @@ video {
     font-family: 'Open Sans', sans-serif;
 }
 
-#samlet_quiz{
+#samlet_quiz {
+    display: block;
+    position: relative;
     flex-direction: column;
     flex-basis: 400px;
     flex-grow: 1;
     font-family: 'Open Sans', sans-serif;
-    margin-left: 1rem;
     padding-top: 1rem;
 }
+
+/*
+#samlet_quiz input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+*/
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+#samlet_quiz:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+#samlet_quiz input:checked ~ .checkmark {
+    background-color: #33FC02;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+#samlet_quiz input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+#samlet_quiz .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
 
 #quizzen {
     font-size: 20px;
@@ -157,20 +243,23 @@ video {
 .question {
     font-weight: 600;
     color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .answers {
     margin-bottom: 20px;
     font-size: 1rem;
     color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .answers label {
     display: block;
+
 }
 
 #submit {
-    font-family: sans-serif;
+    font-family: 'Abel', sans-serif;
     font-size: 20px;
     background-color: #279;
     color: #fff;
@@ -179,6 +268,7 @@ video {
     padding: 20px;
     cursor: pointer;
     margin-bottom: 20px;
+    margin-left: 1rem;
 }
 
 #submit:hover {
@@ -186,152 +276,198 @@ video {
 }
 
 
+#results {
+    padding-left: 1rem;
+}
+
+
+
 
 
 /*CYKELHJELM*/
 
 #cykelhjelm {
-    background-color: #373D46;
+    background-color: #383e47;
     box-shadow: 0px 0px;
-    color: white;
+    color: #fff;
     font-family: 'Abel', sans-serif;
-    font-size: 2.5rem;
-    text-align: center
+    font-weight: bold;
+    text-align: center;
 }
 
 /*SPLASH*/
 
 #splash {
-    max-width: 1500px;
+    position: relative;
     margin: 0 auto;
     box-shadow: 0px 0px;
     margin-top: 0rem;
+    background-image: url(billeder/splash-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
 }
 
+
+#splash .explainer {
+    background-color: hsla(216, 12%, 25%, 0.76);
+    color: white;
+    width: 40vw;
+    position: absolute;
+    bottom: 0;
+}
 
 
 /*Piechart*/
 
 
 #datavisualisering .sectionwrapper {
-    flex-basis: 1200px;
+flex-wrap: wrap;
     display: flex;
-    flex-wrap: wrap;
+  justify-content: center;
+  
 }
 
+
 .datavisualisering_tekst {
+    display: flex;
     flex-direction: column;
-    flex-basis: 400px;
-    flex-grow: 1;
+    flex-grow: 0.3;
     font-family: 'Open Sans', sans-serif;
+    flex-basis: 400px;
+    justify-content: center;
 }
 
 .svgcontainer {
     text-align: center;
     flex-direction: column;
-    flex-basis: 400px;
     flex-grow: 1;
+    flex-basis: 400px;
+}
+
+.piechart {
+    background: #ddd;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+    margin-top: 5px;
+    
+    margin-left: 10px;
+
+}
+
+.pie1 {
+    fill: none;
+    stroke: #33FC02;
+    stroke-width: 200;
+    stroke-dasharray: 10 632;
+    transition: all 1s ease;
+}
+
+.pie2 {
+    fill: none;
+    stroke: #3d60f0;
+    stroke-width: 200;
+    stroke-dasharray: 10 632;
+    stroke-dashoffset: -10;
+    transition: all 1s ease;
+}
+
+.pie3 {
+    fill: none;
+    stroke: #f52b2b;
+    stroke-width: 200;
+    stroke-dasharray: 10 632;
+    stroke-dashoffset: -20;
+    transition: all 1s ease;
 }
 
 
-
-
- .piechart {
-            background: #ddd;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            transform: rotate(-90deg);
-            margin-top: 5px;
-     margin-right: 5px;
-     margin-left: 10px;
-     
-        }
-        .pie1 {
-            fill: none;
-            stroke: #149f4e;
-            stroke-width: 200;
-            stroke-dasharray: 10 632;
-            transition: all 1s ease;
-        }
-        .pie2 {
-            fill: none;
-            stroke: #3d60f0;
-            stroke-width: 200;
-            stroke-dasharray: 10 632;
-            stroke-dashoffset: -10;
-            transition: all 1s ease;
-        }
-        .pie3 {
-            fill: none;
-            stroke: #f52b2b;
-            stroke-width: 200;
-            stroke-dasharray: 10 632;
-            stroke-dashoffset: -20;
-            transition: all 1s ease;
-        }
-
-
-.pie1:hover{
+.pie1:hover {
     opacity: 0.5;
-    
+
 }
 
-.pie2:hover{
+.pie2:hover {
     opacity: 0.5;
-    
+
 }
 
-.pie3:hover{
+.pie3:hover {
     opacity: 0.5;
-    
+
 }
-     
-    
-        
-    #tekst text {
-            transform: rotate(90deg);
-           
-            
-        }
 
-#chart_tekst p{
-    padding: 0.5rem;}
+.graf-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
 
-        
-        .cirkel1{
-            border-radius: 50%;
-            width: 10px;
-            height: 10px;
-            background-color:#3d60f0 ;
-            display: inline-block;
-            margin-right: 8px;
-            margin-left: 8px;
-            
-        }
-        
-        .cirkel2{
-            border-radius: 50%;
-            width: 10px;
-            height: 10px;
-            background-color: #f52b2b;
-            display: inline-block;
-            margin-right: 8px;
-            margin-left: 8px;
-            
-        }
-        
-        .cirkel3{
-            border-radius: 50%;
-            width: 10px;
-            height: 10px;
-            background-color: #149f4e;
-            display: inline-block;
-            margin-right: 8px;
-            margin-left: 8px;
-            
-        }
-        
+
+
+#tekst text {
+    transform: rotate(90deg);
+
+
+}
+
+#chart_tekst p {
+    padding: 0.5rem;
+}
+
+
+.cirkel1 {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #3d60f0;
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 8px;
+
+}
+
+.cirkel2 {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #f52b2b;
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 8px;
+
+}
+
+.cirkel3 {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #33FC02;
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 8px;
+
+}
+
+/*SOME*/
+
+#some {
+    text-align: center;
+}
+
+#some img {
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition-duration: 0.4s;
+}
+
+#some img:hover {
+    opacity: 0.5;
+}
 
 /*MEDIA*/
 
@@ -347,6 +483,17 @@ video {
         margin-top: 0.65rem;
 
     }
+
+    #splash .explainer {
+
+        width: 80vw;
+    }
+
+    #cykelhjelm {
+        font-size: 1.5rem;
+    }
+    
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -361,6 +508,23 @@ video {
         margin-top: 0.4rem;
 
     }
+
+    #splash {
+        background-position: 0 -60px;
+        height: 400px;
+    }
+
+    #splash .explainer {
+
+        width: 67vw;
+    }
+
+    #cykelhjelm {
+        font-size: 2rem;
+    }
+
+
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -374,4 +538,17 @@ video {
         margin-top: 1.2rem;
         width: 8%;
     }
+
+    #splash .explainer {
+
+        width: 50vw;
+    }
+
+    #cykelhjelm {
+        font-size: 2.5rem;
+    }
+        #datavisualisering .sectionwrapper {
+justify-content: flex-end
+  
+}
 }
