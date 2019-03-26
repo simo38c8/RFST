@@ -154,13 +154,64 @@ video {
 }
 
 #samlet_quiz {
+    display: block;
+    position: relative;
     flex-direction: column;
     flex-basis: 400px;
     flex-grow: 1;
     font-family: 'Open Sans', sans-serif;
-    margin-left: 1rem;
     padding-top: 1rem;
 }
+
+#samlet_quiz input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+#samlet_quiz:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+#samlet_quiz input:checked ~ .checkmark {
+    background-color: #33FC02;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+#samlet_quiz input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+#samlet_quiz .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
 
 #quizzen {
     font-size: 20px;
@@ -179,20 +230,23 @@ video {
 .question {
     font-weight: 600;
     color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .answers {
     margin-bottom: 20px;
     font-size: 1rem;
     color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .answers label {
     display: block;
+
 }
 
 #submit {
-    font-family: sans-serif;
+    font-family: 'Abel', sans-serif;
     font-size: 20px;
     background-color: #279;
     color: #fff;
@@ -201,11 +255,18 @@ video {
     padding: 20px;
     cursor: pointer;
     margin-bottom: 20px;
+    margin-left: 1rem;
 }
 
 #submit:hover {
     background-color: #38a;
 }
+
+
+#results {
+    padding-left: 1rem;
+}
+
 
 
 
@@ -217,7 +278,6 @@ video {
     box-shadow: 0px 0px;
     color: #33FC02;
     font-family: 'Abel', sans-serif;
-    font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
 }
@@ -414,6 +474,11 @@ video {
 
         width: 80vw;
     }
+
+    #cykelhjelm {
+        font-size: 1.5rem;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -439,6 +504,10 @@ video {
         width: 67vw;
     }
 
+    #cykelhjelm {
+        font-size: 2rem;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -458,4 +527,7 @@ video {
         width: 50vw;
     }
 
+    #cykelhjelm {
+        font-size: 2.5rem;
+    }
 }
