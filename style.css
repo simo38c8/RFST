@@ -1,4 +1,3 @@
-/*font-family: 'Abel', sans-serif;*/
 
 * {
     margin: 0;
@@ -77,13 +76,9 @@ p::selection {
 
 
 section {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 40px;
-    /*
-    box-shadow: 2.5px 5px #000000;
-    margin-top: 1rem;
-*/
 
 }
 
@@ -97,10 +92,13 @@ section:nth-child(even) {
 
 /*standard SECTION*/
 
-#indslag .sectionwrapper {
+.sectionwrapper {
     flex-basis: 1200px;
+    max-width: 1450px;
     display: flex;
     flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*KOLONNE*/
@@ -119,11 +117,6 @@ section:nth-child(even) {
 
 /*VIDEO*/
 
-#video .sectionwrapper {
-    flex-basis: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .tekst_video {
     flex-direction: column;
@@ -145,17 +138,13 @@ video {
     padding: 1rem;
 }
 
-
+#slogan {
+    width: 100%;
+}
 
 
 
 /******** quiz style *********/
-
-#quiz .sectionwrapper {
-    display: flex;
-    flex-wrap: wrap;
-
-}
 
 .tekst_quiz {
     flex-direction: column;
@@ -174,13 +163,6 @@ video {
     padding-top: 1rem;
 }
 
-/*
-#samlet_quiz input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-*/
 
 .checkmark {
     position: absolute;
@@ -192,29 +174,29 @@ video {
     border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
+
 #samlet_quiz:hover input ~ .checkmark {
     background-color: #ccc;
 }
 
-/* When the radio button is checked, add a blue background */
+
 #samlet_quiz input:checked ~ .checkmark {
     background-color: #33FC02;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
+
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
+
 #samlet_quiz input:checked ~ .checkmark:after {
     display: block;
 }
 
-/* Style the indicator (dot/circle) */
+
 #samlet_quiz .checkmark:after {
     top: 9px;
     left: 9px;
@@ -298,6 +280,9 @@ video {
 /*SPLASH*/
 
 #splash {
+    max-width: none;
+    min-width: 100%;
+    width: auto;
     position: relative;
     margin: 0 auto;
     box-shadow: 0px 0px;
@@ -324,9 +309,6 @@ video {
 
 
 #datavisualisering .sectionwrapper {
-
-    flex-wrap: wrap;
-    display: flex;
     justify-content: center;
 }
 
@@ -399,7 +381,7 @@ video {
 
 .pie1 {
     fill: none;
-    stroke: #33FC02;
+    stroke: #9a9a9a;
     stroke-width: 200;
     stroke-dasharray: 10 632;
     transition: all 1s ease;
@@ -407,7 +389,7 @@ video {
 
 .pie2 {
     fill: none;
-    stroke: #3d60f0;
+    stroke: #33FC02;
     stroke-width: 200;
     stroke-dasharray: 10 632;
     stroke-dashoffset: -10;
@@ -417,7 +399,7 @@ video {
 
 .pie3 {
     fill: none;
-    stroke: #f52b2b;
+    stroke: #149b02;
     stroke-width: 200;
     stroke-dasharray: 10 632;
     stroke-dashoffset: -20;
@@ -454,38 +436,6 @@ video {
 }
 
 
-.cirkel1 {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: #3d60f0;
-    display: inline-block;
-    margin-right: 8px;
-    margin-left: 8px;
-
-}
-
-.cirkel2 {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: #f52b2b;
-    display: inline-block;
-    margin-right: 8px;
-    margin-left: 8px;
-
-}
-
-.cirkel3 {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: #33FC02;
-    display: inline-block;
-    margin-right: 8px;
-    margin-left: 8px;
-
-}
 
 /*SOME*/
 
@@ -525,7 +475,7 @@ video {
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    background-color: #3d60f0;
+    background-color: #33FC02;
     display: inline-block;
     margin-right: 8px;
     margin-left: 8px;
@@ -536,7 +486,7 @@ video {
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    background-color: #f52b2b;
+    background-color: #149b02;
     display: inline-block;
     margin-right: 8px;
     margin-left: 8px;
@@ -547,7 +497,7 @@ video {
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    background-color: #33FC02;
+    background-color: #9a9a9a;
     display: inline-block;
     margin-right: 8px;
     margin-left: 8px;
@@ -572,6 +522,8 @@ video {
     opacity: 0.5;
 }
 
+ 
+
 /*MEDIA*/
 
 @media only screen and (min-width: 300px) {
@@ -595,6 +547,11 @@ video {
     #cykelhjelm {
         font-size: 1.5rem;
     }
+    
+     .video iframe {
+        height: 400px;
+    }
+    
 
 }
 
@@ -625,9 +582,13 @@ video {
         font-size: 2rem;
     }
 
-     #datavisualisering .sectionwrapper {
-justify-content: flex-end;
-}
+    #datavisualisering .sectionwrapper {
+        justify-content: flex-end;
+    }
+    
+    #slogan {
+    width: 100%;
+    }
 
 }
 
@@ -657,8 +618,18 @@ justify-content: flex-end;
     }
 
 
-  #datavisualisering .sectionwrapper {
-justify-content: flex-end;
+    #datavisualisering .sectionwrapper {
+        justify-content: flex-end;
+    }
+    
+     #slogan {
+    width: 60%;
+    }
+
+    
+    .video iframe {
+        height: 500px;
+    }
 }
 
-}
+
