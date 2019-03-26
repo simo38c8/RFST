@@ -354,7 +354,7 @@ flex-wrap: wrap;
     border-radius: 50%;
     transform: rotate(-90deg);
     margin-top: 5px;
-    
+    margin-right: 5px;
     margin-left: 10px;
 
 }
@@ -492,7 +492,6 @@ flex-wrap: wrap;
     #cykelhjelm {
         font-size: 1.5rem;
     }
-    
 
 }
 
@@ -523,7 +522,7 @@ flex-wrap: wrap;
         font-size: 2rem;
     }
 
-
+    #datavisualisering .sectionwrapper {}
 
 }
 
@@ -547,7 +546,8 @@ flex-wrap: wrap;
     #cykelhjelm {
         font-size: 2.5rem;
     }
-        #datavisualisering .sectionwrapper {
+    
+     #datavisualisering .sectionwrapper {
 justify-content: flex-end
   
 }
