@@ -174,11 +174,13 @@ video {
     padding-top: 1rem;
 }
 
+/*
 #samlet_quiz input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
+*/
 
 .checkmark {
     position: absolute;
@@ -325,24 +327,22 @@ video {
     flex-basis: 1200px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .datavisualisering_tekst {
     flex-direction: column;
-    flex-basis: 400px;
     flex-grow: 1;
     font-family: 'Open Sans', sans-serif;
+    flex-basis: 400px;
 }
 
 .svgcontainer {
     text-align: center;
     flex-direction: column;
-    flex-basis: 400px;
     flex-grow: 1;
+    flex-basis: 400px;
 }
-
-
-
 
 .piechart {
     background: #ddd;
@@ -517,6 +517,10 @@ video {
 
     #cykelhjelm {
         font-size: 2rem;
+    }
+
+    #datavisualisering .sectionwrapper {
+
     }
 
 }
