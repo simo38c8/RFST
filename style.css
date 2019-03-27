@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -329,6 +328,7 @@ video {
     flex-basis: 400px;
 }
 
+
 .piechart {
     background: #ddd;
     width: 200px;
@@ -522,7 +522,7 @@ video {
     opacity: 0.5;
 }
 
- 
+
 
 /*MEDIA*/
 
@@ -547,11 +547,16 @@ video {
     #cykelhjelm {
         font-size: 1.5rem;
     }
-    
-     .video iframe {
+
+    .video iframe {
         height: 400px;
     }
-    
+
+    #datavisualisering h2 {
+        text-align: center;
+
+    }
+
 
 }
 
@@ -585,53 +590,53 @@ video {
     #datavisualisering .sectionwrapper {
         justify-content: flex-end;
     }
-    
+
     #slogan {
-    width: 100%;
+        width: 100%;
     }
 
 
 
-@media only screen and (min-width: 1200px) {
-    nav img {
-        width: 60%;
-        padding: 1rem;
+
+
+    @media only screen and (min-width: 1200px) {
+        nav img {
+            width: 60%;
+            padding: 1rem;
+        }
+
+        .search {
+            text-align: center;
+            margin-top: 1.2rem;
+            width: 8%;
+        }
+
+        #splash {
+            height: 35vw;
+        }
+
+        #splash .explainer {
+
+            width: 50vw;
+        }
+
+        #cykelhjelm {
+            font-size: 2.5rem;
+        }
+
+
+        #datavisualisering .sectionwrapper {
+            justify-content: flex-end;
+        }
+
+
+        #slogan {
+            width: 60%;
+        }
+
+
+
+        .video iframe {
+            height: 500px;
+        }
     }
-
-    .search {
-        text-align: center;
-        margin-top: 1.2rem;
-        width: 8%;
-    }
-
-    #splash {
-        height: 35vw;
-    }
-
-    #splash .explainer {
-
-        width: 50vw;
-    }
-
-    #cykelhjelm {
-        font-size: 2.5rem;
-    }
-
-
-    #datavisualisering .sectionwrapper {
-        justify-content: flex-end;
-    }
-
-    
-     #slogan {
-    width: 60%;
-    }
-
-
-    
-    .video iframe {
-        height: 500px;
-    }
-}
-
-
